@@ -188,8 +188,8 @@
                 else if (side === 2) { this.x = Math.random() * width; this.y = height + 40; }
                 else { this.x = -40; this.y = Math.random() * height; }
                 
-                // Dificultad extrema: Velocidad muy alta y desafiante
-                this.speed = Math.random() * 1.8 + 3.5; 
+                // Velocidad equilibrada pero desafiante (rango óptimo para móviles)
+                this.speed = Math.random() * 1.2 + 2.6; 
                 this.wingPhase = Math.random() * Math.PI * 2;
                 this.wobbleSpeed = Math.random() * 0.1 + 0.1;
             }
@@ -202,7 +202,7 @@
                     this.x += (dx / dist) * this.speed;
                     this.y += (dy / dist) * this.speed;
                 }
-                this.wingPhase += this.wobbleSpeed * 4;
+                this.wingPhase += this.wobbleSpeed * 3.5;
             }
 
             draw() {
@@ -301,12 +301,11 @@
             const delta = 0.016;
             gameTimer -= delta;
             
-            // Dificultad extrema: Aparición masiva y constante de enemigos
             spawnTimer += delta;
-            if (spawnTimer >= 0.22) { 
+            if (spawnTimer >= 0.28) { 
                 spawnTimer = 0;
                 enemies.push(new Enemy());
-                if(Math.random() > 0.2) {
+                if(Math.random() > 0.25) {
                     enemies.push(new Enemy());
                 }
             }
