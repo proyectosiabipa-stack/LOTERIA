@@ -188,7 +188,6 @@
                 else if (side === 2) { this.x = Math.random() * width; this.y = height + 40; }
                 else { this.x = -40; this.y = Math.random() * height; }
                 
-                // Velocidad equilibrada pero desafiante (rango óptimo para móviles)
                 this.speed = Math.random() * 1.2 + 2.6; 
                 this.wingPhase = Math.random() * Math.PI * 2;
                 this.wobbleSpeed = Math.random() * 0.1 + 0.1;
@@ -378,5 +377,22 @@
         document.getElementById('start-btn').onclick = startGame;
         document.getElementById('restart-btn').onclick = startGame;
     </script>
+
+    <!-- Default Statcounter code for Defense Repelente
+    https://proyectosiabipa-stack.github.io/LOTERIA/ -->
+    <script type="text/javascript">
+    var sc_project=13351295; 
+    var sc_invisible=1; 
+    var sc_security="d9420c89"; 
+    </script>
+    <script type="text/javascript"
+    src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript><div class="statcounter"><a title="Web Analytics Made Easy -
+    Statcounter" href="https://statcounter.com/" target="_blank"><img
+    class="statcounter" src="https://c.statcounter.com/13351295/0/d9420c89/1/"
+    alt="Web Analytics Made Easy - Statcounter"
+    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+    <!-- End of Statcounter Code -->
+
 </body>
 </html>
